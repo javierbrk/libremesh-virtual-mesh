@@ -189,6 +189,7 @@ attach() {
   else
     tmux attach -t "$SESSION"
   fi
+}
 
 main() {
   prepare_images
