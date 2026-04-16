@@ -17,7 +17,7 @@ service vwifi-client stop
 
 LAST_OCT=$(cat /sys/class/net/eth0/address | cut -d: -f6)
 
-uci set lime-node.network.main_ipv4_address="172.31.0.0/16"
+uci set lime-node.network.main_ipv4_address="10.13.0.0/16"
 
 uci set vwifi.config.server_ip="$1"
 uci set vwifi.config.mac_prefix="02:00:00:00:00:${LAST_OCT}"
@@ -32,5 +32,6 @@ lime-config
 wifi down
 sleep 7
 wifi up
+
 EOSSH
 
